@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--  -->
+    <?php 
+    if (isset($_POST['sub'])) {
+      $client = htmlspecialchars($_POST['client']);
+      $imatrucle = htmlspecialchars($_POST['imatrucle']);
+      $Debut = htmlspecialchars($_POST['Debut']);
+      $Fin = htmlspecialchars($_POST['Fin']);
+      $PrixJour = htmlspecialchars($_POST['Jour']);
+      $NombreJour = htmlspecialchars($_POST['Nombre']);
+      $Total = htmlspecialchars($_POST['Total']);
+      echo $client, ",",$imatrucle, ",",$Debut, ",",$Fin, ",",$PrixJour, ",",$NombreJour, ",",$Total ;
+    }
+    ?>
+    <!--  -->
     <div class="container">
       <h1>Location Auto</h1>
       <form action="" method="post">
@@ -17,7 +31,7 @@
         <label for="Debut">date Debut</label>
         <input type="date" name="Debut" id="Debut" />
         <label for="Fin">date Fin</label>
-        <input type="date0" name="Fin" id="Fin" />
+        <input type="date" name="Fin" id="Fin" />
         <label for="Jour">Prix Jour</label>
         <input type="text" name="Jour" id="Jour" />
         <label for="Nombre">Nombre Jour</label>
