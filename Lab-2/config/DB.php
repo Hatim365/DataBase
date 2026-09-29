@@ -1,4 +1,5 @@
 <?php
+
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=locationauto", "root", "");
 } catch (PDOException $eror) {
@@ -6,4 +7,5 @@ try {
 }finally{
     print("connect");
 }
+
 ?>
